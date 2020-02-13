@@ -20,8 +20,8 @@ class ArgsParser(ArgsParserABC):
 
     def _set_args(self) -> None:
         parser = argparse.ArgumentParser(description='Command-line utility.')
-        parser.add_argument('path_to_students', type=argparse.FileType('r'), help='Path to students file')
-        parser.add_argument('path_to_rooms', type=argparse.FileType('r'), help='Path to rooms file')
+        parser.add_argument('path_to_students', type=str, help='Path to students file')
+        parser.add_argument('path_to_rooms', type=str, help='Path to rooms file')
         parser.add_argument('format', choices=['json', 'xml'], help='Output format')
         self.args = parser.parse_args()
 
