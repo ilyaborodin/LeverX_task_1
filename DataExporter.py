@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class DataExporter(ABC):
+class DataExporterABC(ABC):
     """Класс служит для экпорта данных в xml и json"""
     @abstractmethod
     def export_to(self, path: str, format: str) -> dict:
