@@ -5,12 +5,12 @@ from abc import ABC, abstractmethod
 class FileReaderABC(ABC):
     """Класс служит для чтения данных из файлов"""
     @abstractmethod
-    def load_json_file(self, path: str):
+    def load_file(self, path):
         pass
 
 
 class FileReader(FileReaderABC):
-    def load_json_file(self, path: str):
+    def load_file(self, path):
         try:
             with open(path, 'r', encoding='utf-8') as file:
                 json_text = json.load(file)
